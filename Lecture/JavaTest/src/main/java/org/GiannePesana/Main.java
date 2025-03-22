@@ -6,11 +6,5 @@ public class Main {
         System.out.println("Changes in IDE locally");
         System.out.println("Testing git revert");
         System.out.println("2");
-        gojaosgjas
-                fasgasg
-
-                afag
-                        agaga
-                        gag
     }
 }
