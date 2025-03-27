@@ -9,9 +9,6 @@ public class Displays {
     static String gathererData = "";
     static String farmerData = "";
 
-    static String formatHeader = "%-15s %-15s %-15s %-15s\n";
-    static String formatData   = "%-15s %-15s %-15s %-15s\n";
-
     public static String typeOfRole() {
         String menu = "Current number of roles simulated: " + (Tribemen.rolesCount == 0 ? "None" : Tribemen.rolesCount) +
                 "\n\nSelect a role:" +
@@ -58,13 +55,16 @@ public class Displays {
     }
 
     public static void displayCompleteSummary() {
-        String message = "Table summary\n\n" +
+        String message = "Table Summary\n\n" +
                 "============ Hunter ===============\n" +
-                String.format("%-15s %-15s %-15s %-15s\n", "Name" , "Tribe", "Weapon", "Skill Level") +
+                String.format("%-18s %-18s %-18s %-12s\n", "Name", "Tribe", "Weapon", "Skill Level") +
                 hunterData +
                 "============ Gatherer ===============\n" +
-                String.format("%-15s %-15s %-15s %-15s\n", "Name" , "Tribe", "Collects Medicinal Plants", "Preferred Season") +
-                gathererData;
+                String.format("%-18s %-18s %-25s %-18s\n", "Name", "Tribe", "Collects Medicinal Plants", "Preferred Season") +
+                gathererData +
+                "============ Farmer ===============\n" +
+                String.format("%-18s %-18s %-18s %-18s\n", "Name", "Tribe", "Field Size", "Crop Type") +
+                farmerData;
 
         JOptionPane.showMessageDialog(null, message);
     }
